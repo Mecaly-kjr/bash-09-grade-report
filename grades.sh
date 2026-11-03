@@ -30,6 +30,8 @@ create_report() {
     local skipped=0
     local total_sum=0
     local student_count=0
+    local rank=0
+    local valid=true
 
     tmp=$(mktemp) || die "Cannot create temporary file."
 
@@ -102,8 +104,8 @@ create_report() {
 
     # Display report
     printf "\n"
-    printf "%4s  %-16s %4s %4s %4s %4s %6s  %s\n" \
-        "RANK" "NAME" "HTML" "CSS" "BASH" "GIT" "AVG" "MENTION"
+    printf "%4d  %-16s %5s %5s %5s %5s %6s  %s\n" \
+    "$rank" "$name" "$html" "$css" "$bash" "$git" "$avg" "$mention"
 
     rank=0
 

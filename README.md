@@ -1,6 +1,6 @@
 # 🏷 Grade Report – Bash Project
 
-A Bash script that automates student grade calculations, averages, academic mentions, and rankings from CSV files.
+A Bash script that reads student grades from a CSV file, calculates averages, assigns mentions, ranks students, and displays the class average.
 
 ## 📌 Problem Statement
 
@@ -37,12 +37,43 @@ Manual calculation of student grades is time-consuming and can lead to errors. T
 
 ## ⚙️ Installation & Setup
 
+## Files
+
+- `grades.sh` – Main script that generates the grade report.
+- `grades.csv` – Sample CSV file containing student names and grades.
+- `messy.csv` – Test CSV file containing invalid records and extra spaces to test error handling.
+
+## How to Run
+
 ```bash
 git clone https://github.com/Mecaly-kjr/bash-09-grade-report.git
+
 cd bash-09-grade-report
+
+```
+
+```bash
 chmod +x grades.sh
+```
+
+Run the script with the sample CSV file:
+
+```bash
 ./grades.sh grades.csv
 ```
+
+You can also test it with:
+
+```bash
+./grades.sh messy.csv
+```
+
+## Requirements
+
+- Bash
+- CSV file with the header: `name,html,css,bash,git`
+
+The script skips invalid records and displays warnings with their line numbers.
 
 ## 🧠 Challenges Faced
 
